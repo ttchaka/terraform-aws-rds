@@ -9,7 +9,7 @@ data "aws_availability_zones" "available" {}
 resource "random_pet" "random" {}
 
 module "vpc" {
- # source  = "terraform-aws1-modules/vpc/aws"
+  source  = "terraform-aws1-modules/vpc/aws"
   version = "2.77.0"
 
   name                 = "${random_pet.random.id}-education"
